@@ -30,9 +30,6 @@ jobs:
       - name: Run Build Runner 🏗️
         run: dart run build_runner build -d
 
-      - name: Build Database 🏗️
-        run: dart run tool/build_database.dart
-
       - name: Build Web 🕸️
         run: flutter build web --release --base-href "/der-die-das/"
 
