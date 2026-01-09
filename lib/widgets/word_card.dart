@@ -6,6 +6,7 @@ import 'package:der_die_das/providers/tts_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../models/word.dart';
 import '../providers/locale_provider.dart';
 import '../providers/theme_provider.dart';
@@ -225,10 +226,14 @@ class _WordCardState extends ConsumerState<WordCard> {
                     child: Text(
                       widget.word.word,
                       textAlign: TextAlign.center,
-                      style: theme.textTheme.displaySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          fontSize: widget.height * 0.12,
-                          fontFamily: isModern ? null : 'serif'),
+                      style: (theme.textTheme.displaySmall ?? const TextStyle())
+                          .copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: widget.height * 0.12,
+                        fontFamily: isModern
+                            ? null
+                            : GoogleFonts.robotoSerif().fontFamily,
+                      ),
                     ),
                   ),
                 ),
