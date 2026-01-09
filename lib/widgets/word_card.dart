@@ -228,11 +228,20 @@ class _WordCardState extends ConsumerState<WordCard> {
                       textAlign: TextAlign.center,
                       style: (theme.textTheme.displaySmall ?? const TextStyle())
                           .copyWith(
-                        fontWeight: FontWeight.bold,
-                        fontSize: widget.height * 0.12,
-                        fontFamily: isModern
-                            ? null
-                            : GoogleFonts.robotoSerif().fontFamily,
+                        fontWeight: settings.cardStyle == CardStyle.gothic
+                            ? FontWeight.normal
+                            : FontWeight.bold,
+                        fontSize: widget.height *
+                            (settings.cardStyle == CardStyle.gothic
+                                ? 0.15
+                                : 0.12),
+                        fontFamily: settings.cardStyle == CardStyle.gothic
+                            ? GoogleFonts.unifrakturMaguntia().fontFamily
+                            : (settings.cardStyle == CardStyle.classic
+                                ? (kIsWeb
+                                    ? GoogleFonts.notoSerif().fontFamily
+                                    : 'serif')
+                                : null),
                       ),
                     ),
                   ),

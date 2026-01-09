@@ -195,6 +195,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get cardStyleClassic => 'Классика';
 
   @override
+  String get cardStyleGothic => 'Швабах';
+
+  @override
+  String get fontSettingsTitle => 'Шрифт';
+
+  @override
   String get handsFree => 'Голосовое управление';
 
   @override

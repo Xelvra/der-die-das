@@ -60,6 +60,8 @@
   "cardStyle": "Стиль карточек",
   "cardStyleModern": "Модерн",
   "cardStyleClassic": "Классика",
+  "cardStyleGothic": "Швабах",
+  "fontSettingsTitle": "Шрифт",
   "handsFree": "Голосовое управление",
   "listenTooltip": "Прослушать",
   "dailyReminderTitle": "Время немецкого!",

@@ -60,6 +60,8 @@
   "cardStyle": "Kartenstil",
   "cardStyleModern": "Modern",
   "cardStyleClassic": "Klassisch",
+  "cardStyleGothic": "Schwabacher",
+  "fontSettingsTitle": "Schrift",
   "handsFree": "Sprachsteuerung",
   "listenTooltip": "Aussprache anhören",
   "dailyReminderTitle": "Zeit für Deutsch!",

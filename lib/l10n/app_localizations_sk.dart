@@ -189,10 +189,16 @@ class AppLocalizationsSk extends AppLocalizations {
   String get cardStyle => 'Štýl kariet';
 
   @override
-  String get cardStyleModern => 'Moderný štýl';
+  String get cardStyleModern => 'Moderný';
 
   @override
-  String get cardStyleClassic => 'Klasický štýl';
+  String get cardStyleClassic => 'Klasický';
+
+  @override
+  String get cardStyleGothic => 'Švabach';
+
+  @override
+  String get fontSettingsTitle => 'Písmo';
 
   @override
   String get handsFree => 'Hlasové ovládanie';

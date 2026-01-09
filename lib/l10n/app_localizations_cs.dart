@@ -189,10 +189,16 @@ class AppLocalizationsCs extends AppLocalizations {
   String get cardStyle => 'Styl karet';
 
   @override
-  String get cardStyleModern => 'Moderní styl';
+  String get cardStyleModern => 'Moderní';
 
   @override
-  String get cardStyleClassic => 'Klasický styl';
+  String get cardStyleClassic => 'Klasický';
+
+  @override
+  String get cardStyleGothic => 'Švabach';
+
+  @override
+  String get fontSettingsTitle => 'Písmo';
 
   @override
   String get handsFree => 'Hlasové ovládání';

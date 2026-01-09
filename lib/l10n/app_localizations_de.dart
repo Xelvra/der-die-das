@@ -195,6 +195,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get cardStyleClassic => 'Klassisch';
 
   @override
+  String get cardStyleGothic => 'Schwabacher';
+
+  @override
+  String get fontSettingsTitle => 'Schrift';
+
+  @override
   String get handsFree => 'Sprachsteuerung';
 
   @override

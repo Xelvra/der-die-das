@@ -340,19 +340,81 @@ class _AppDrawerState extends ConsumerState<AppDrawer> {
                             ),
                             _buildSettingTile(
                               context,
-                              title: settings.cardStyle == CardStyle.modern
-                                  ? l10n.cardStyleModern
-                                  : l10n.cardStyleClassic,
+                              title: l10n.fontSettingsTitle,
                               icon: Icons.style,
                               isActive: false,
                               onTap: () {
-                                final nextStyle =
-                                    settings.cardStyle == CardStyle.modern
-                                        ? CardStyle.classic
-                                        : CardStyle.modern;
-                                ref
-                                    .read(settingsProvider.notifier)
-                                    .setCardStyle(nextStyle);
+                                showDialog<void>(
+                                  context: context,
+                                  builder: (context) {
+                                    return SimpleDialog(
+                                      children: CardStyle.values.map((style) {
+                                        final isSelected =
+                                            settings.cardStyle == style;
+                                        String styleName;
+                                        switch (style) {
+                                          case CardStyle.modern:
+                                            styleName = l10n.cardStyleModern;
+                                            break;
+                                          case CardStyle.classic:
+                                            styleName = l10n.cardStyleClassic;
+                                            break;
+                                          case CardStyle.gothic:
+                                            styleName = l10n.cardStyleGothic;
+                                            break;
+                                        }
+
+                                        return SimpleDialogOption(
+                                          padding: const EdgeInsets.symmetric(
+                                              vertical: 12, horizontal: 24),
+                                          onPressed: () {
+                                            ref
+                                                .read(settingsProvider.notifier)
+                                                .setCardStyle(style);
+                                            Navigator.pop(context);
+                                          },
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                isSelected
+                                                    ? Icons.radio_button_checked
+                                                    : Icons
+                                                        .radio_button_unchecked,
+                                                color: isSelected
+                                                    ? theme.colorScheme.primary
+                                                    : theme
+                                                        .colorScheme.onSurface
+                                                        .withValues(alpha: 0.4),
+                                                size: 20,
+                                              ),
+                                              const SizedBox(width: 16),
+                                              Expanded(
+                                                child: FittedBox(
+                                                  fit: BoxFit.scaleDown,
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Text(
+                                                    styleName,
+                                                    style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight: isSelected
+                                                          ? FontWeight.bold
+                                                          : FontWeight.normal,
+                                                      color: isSelected
+                                                          ? theme.colorScheme
+                                                              .primary
+                                                          : null,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        );
+                                      }).toList(),
+                                    );
+                                  },
+                                );
                               },
                             ),
                             if (isMobile)

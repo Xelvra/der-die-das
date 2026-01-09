@@ -189,10 +189,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cardStyle => 'Card Style';
 
   @override
-  String get cardStyleModern => 'Modern Style';
+  String get cardStyleModern => 'Modern';
 
   @override
-  String get cardStyleClassic => 'Classic Style';
+  String get cardStyleClassic => 'Classic';
+
+  @override
+  String get cardStyleGothic => 'Gothic';
+
+  @override
+  String get fontSettingsTitle => 'Font';
 
   @override
   String get handsFree => 'Voice Control';

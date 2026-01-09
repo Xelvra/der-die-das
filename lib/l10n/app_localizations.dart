@@ -449,14 +449,26 @@ abstract class AppLocalizations {
   /// No description provided for @cardStyleModern.
   ///
   /// In cs, this message translates to:
-  /// **'Moderní styl'**
+  /// **'Moderní'**
   String get cardStyleModern;
 
   /// No description provided for @cardStyleClassic.
   ///
   /// In cs, this message translates to:
-  /// **'Klasický styl'**
+  /// **'Klasický'**
   String get cardStyleClassic;
+
+  /// No description provided for @cardStyleGothic.
+  ///
+  /// In cs, this message translates to:
+  /// **'Švabach'**
+  String get cardStyleGothic;
+
+  /// No description provided for @fontSettingsTitle.
+  ///
+  /// In cs, this message translates to:
+  /// **'Písmo'**
+  String get fontSettingsTitle;
 
   /// No description provided for @handsFree.
   ///
