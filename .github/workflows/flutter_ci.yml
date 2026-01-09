@@ -12,29 +12,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repository code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Setup Flutter environment
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           cache: true
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: flutter pub get
 
-      # 4. Check for formatting issues (Optional but recommended for consistency)
+      - name: Generate Localization 🌍
+        run: flutter gen-l10n
+
+      - name: Run Build Runner 🏗️
+        run: dart run build_runner build -d
+
+      - name: Build Database 🏗️
+        run: dart run tool/build_database.dart
+
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
 
-      # 5. Static Analysis (Enforces analysis_options.yaml)
       - name: Analyze project
         run: flutter analyze
 
-      # 6. Run Tests
       - name: Run tests
         run: flutter test

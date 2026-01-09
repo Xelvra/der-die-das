@@ -24,6 +24,12 @@ jobs:
       - name: Install dependencies 📦
         run: flutter pub get
 
+      - name: Generate Localization 🌍
+        run: flutter gen-l10n
+
+      - name: Run Build Runner 🏗️
+        run: dart run build_runner build -d
+
       - name: Build Database 🏗️
         run: dart run tool/build_database.dart
 
