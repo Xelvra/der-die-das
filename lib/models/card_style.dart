@@ -1,0 +1,4 @@
+enum CardStyle {
+  modern,
+  classic,
+}

@@ -1,0 +1,76 @@
+# Miscellaneous
+*.class
+*.log
+*.py
+*.pyc
+__pycache__/
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+.metadata
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code
+.vscode/
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+
+# Flutter/Dart/Pub related
+**/doc/api/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Web related
+
+# Android related
+**/android/.gradle
+**/android/captures/
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+
+# iOS/macOS related
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.xcode.env.local
+**/ios/**/Flutter/ephemeral/
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+**/macos/Flutter/ephemeral/
+**/macos/Runner/GeneratedPluginRegistrant.*
+
+# Windows related
+**/windows/flutter/ephemeral/
+**/windows/runner/resources/
+
+# Linux related
+**/linux/flutter/ephemeral/
+
+# Proprietary Data (Source CSVs)
+raw_data/*.csv
+
+# Exceptions to above rules.
+!/assets/
+!/assets/db/vocabulary.db
+
+# Test failures
+test/ui/failures/
