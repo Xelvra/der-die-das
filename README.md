@@ -64,6 +64,16 @@ Built with **Flutter**, it leverages a sophisticated **Spaced Repetition System 
 
 ## 🚀 Getting Started
 
+### Prerequisites
+
+Ensure you have the latest stable version of Flutter installed to avoid SDK version mismatches with dependencies.
+
+*   **Update Environment:**
+
+    ```bash
+    flutter upgrade
+    ```
+
 ### Installation
 
 1.  **Clone & Install:**
