@@ -74,3 +74,7 @@ raw_data/*.csv
 
 # Test failures
 test/ui/failures/
+
+# Generated L10n files
+lib/l10n/app_localizations.dart
+lib/l10n/app_localizations_*.dart
