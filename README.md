@@ -68,7 +68,7 @@ Built with **Flutter**, it leverages a sophisticated **Spaced Repetition System 
 
 1.  **Clone & Install:**
     ```bash
-    git clone https://github.com/der-die-das/der-die-das.git
+    git clone https://github.com/Xelvra/der-die-das.git
     cd der-die-das
     flutter pub get
     ```
