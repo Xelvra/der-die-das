@@ -14,6 +14,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:der_die_das/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:google_fonts/google_fonts.dart';
 import 'dart:io';
 import 'dart:async';
 
@@ -404,6 +405,21 @@ class _AppDrawerState extends ConsumerState<AppDrawer> {
                                                           ? theme.colorScheme
                                                               .primary
                                                           : null,
+                                                      fontFamily: switch (
+                                                          style) {
+                                                        CardStyle.modern =>
+                                                          null,
+                                                        CardStyle.gothic =>
+                                                          GoogleFonts
+                                                                  .unifrakturMaguntia()
+                                                              .fontFamily,
+                                                        CardStyle.classic =>
+                                                          kIsWeb
+                                                              ? GoogleFonts
+                                                                      .notoSerif()
+                                                                  .fontFamily
+                                                              : 'serif',
+                                                      },
                                                     ),
                                                   ),
                                                 ),
