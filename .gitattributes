@@ -1,0 +1,11 @@
+# Language statistics should reflect only the Dart application code.
+# Everything below is either generated Flutter platform scaffolding
+# (created by `flutter create`) or vendored web dependencies
+# (web/sqflite_sw.js, web/sqlite3.wasm).
+
+/android/** linguist-vendored
+/ios/**     linguist-vendored
+/linux/**   linguist-vendored
+/macos/**   linguist-vendored
+/windows/** linguist-vendored
+/web/**     linguist-vendored
