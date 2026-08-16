@@ -73,13 +73,10 @@ class _HelpScreenState extends ConsumerState<HelpScreen> {
     super.dispose();
   }
 
-  void _onReorder(int oldIndex, int newIndex) {
+  void _onReorderItem(int oldIndex, int newIndex) {
     final settings = ref.read(settingsProvider);
     final List<String> newOrder = List.from(settings.helpTabOrder);
 
-    if (oldIndex < newIndex) {
-      newIndex -= 1;
-    }
     final String item = newOrder.removeAt(oldIndex);
     newOrder.insert(newIndex, item);
 
@@ -203,7 +200,7 @@ class _HelpScreenState extends ConsumerState<HelpScreen> {
                               child: ReorderableListView.builder(
                                 scrollDirection: Axis.horizontal,
                                 itemCount: tabOrder.length,
-                                onReorder: _onReorder,
+                                onReorderItem: _onReorderItem,
                                 buildDefaultDragHandles: false,
                                 proxyDecorator: (child, index, animation) =>
                                     Material(
